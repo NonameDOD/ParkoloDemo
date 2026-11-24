@@ -3,7 +3,6 @@ import MainLayout from "./layouts/MainLayout";
 import ParkoloProvider from "./contexts/ParkoloContext";
 import ParkolokPage from "./pages/ParkolokPage";
 
-
 function App() {
   return (
     <ParkoloProvider>

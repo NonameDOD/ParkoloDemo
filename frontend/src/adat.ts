@@ -30,5 +30,15 @@ export const PARKOLOLISTA: ParkoloTipus[] = [
     id: 5,
     hely: "A5",
     allapot: "Szabad",
+  },
+  {
+    id: 6,
+    hely: "A6",
+    allapot: "Foglalt",
+  },
+  {
+    id: 7,
+    hely: "A7",
+    allapot: "Szabad",
   }
 ];

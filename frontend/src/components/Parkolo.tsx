@@ -9,10 +9,10 @@ function Parkolo({ parkolo }: ParkoloProps) {
   const { setAllapot } = useParkoloContext();
   return (
     <div className="parkoloKartya">
-      <h1>{parkolo.hely}</h1>
-      <p>{parkolo.allapot}</p>
+      <h1 className="text-dpd-black">{parkolo.hely}</h1>
+      <p className="text-dpd-black">{parkolo.allapot}</p>
       <button
-        className="foglalas"
+        className="foglalas bg-dpd-red text-primary px-6 py-3 rounded-lg"
         disabled={parkolo.allapot === "Foglalt"}
         onClick={() => setAllapot(parkolo.id, "Foglalt")}
       >

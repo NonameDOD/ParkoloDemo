@@ -1,6 +1,7 @@
 import React, {
   createContext,
   useContext,
+  useEffect,
   useState,
   type ReactNode,
 } from "react";
@@ -20,9 +21,8 @@ interface ParkoloProviderProps {
 }
 
 export function ParkoloProvider({ children }: ParkoloProviderProps) {
-  const [parkoloLista, setParkoloLista] = useState<ParkoloTipus[]>(PARKOLOLISTA);
-
-  
+  const [parkoloLista, setParkoloLista] =
+    useState<ParkoloTipus[]>(PARKOLOLISTA);
 
   function setAllapot(id: number, allapot: ParkoloTipus["allapot"]) {
     setParkoloLista((prevLista) =>
@@ -33,7 +33,7 @@ export function ParkoloProvider({ children }: ParkoloProviderProps) {
   }
 
   return (
-    <ParkoloContext.Provider value={{ parkoloLista, setAllapot}}>
+    <ParkoloContext.Provider value={{ parkoloLista, setAllapot }}>
       {children}
     </ParkoloContext.Provider>
   );
